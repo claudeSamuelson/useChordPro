@@ -22,6 +22,9 @@
 		CFF30BB91A581DFE0025986A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF30B981A581DFE0025986A /* UIKit.framework */; };
 		CFF30BC11A581DFE0025986A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFF30BBF1A581DFE0025986A /* InfoPlist.strings */; };
 		CFF30BC31A581DFE0025986A /* useChordProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF30BC21A581DFE0025986A /* useChordProTests.m */; };
+		CFF30BD01A58260F0025986A /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF30BCF1A58260F0025986A /* FileManager.m */; };
+		CFF312F41A582DA30025986A /* chordpro in Resources */ = {isa = PBXBuildFile; fileRef = CFF312F31A582DA30025986A /* chordpro */; };
+		CFF312F71A58523B0025986A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF312F61A58523B0025986A /* Song.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,11 @@
 		CFF30BBE1A581DFE0025986A /* useChordProTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "useChordProTests-Info.plist"; sourceTree = "<group>"; };
 		CFF30BC01A581DFE0025986A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFF30BC21A581DFE0025986A /* useChordProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = useChordProTests.m; sourceTree = "<group>"; };
+		CFF30BCE1A58260F0025986A /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		CFF30BCF1A58260F0025986A /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		CFF312F31A582DA30025986A /* chordpro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = chordpro; sourceTree = "<group>"; };
+		CFF312F51A58523B0025986A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		CFF312F61A58523B0025986A /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,8 @@
 		CFF30B9A1A581DFE0025986A /* useChordPro */ = {
 			isa = PBXGroup;
 			children = (
+				CFF312F31A582DA30025986A /* chordpro */,
+				CFF312F21A5826C50025986A /* Helpers */,
 				CFF30BA31A581DFE0025986A /* AppDelegate.h */,
 				CFF30BA41A581DFE0025986A /* AppDelegate.m */,
 				CFF30BA61A581DFE0025986A /* Main.storyboard */,
@@ -155,6 +165,17 @@
 				CFF30BBF1A581DFE0025986A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFF312F21A5826C50025986A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CFF30BCE1A58260F0025986A /* FileManager.h */,
+				CFF30BCF1A58260F0025986A /* FileManager.m */,
+				CFF312F51A58523B0025986A /* Song.h */,
+				CFF312F61A58523B0025986A /* Song.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF30BB01A581DFE0025986A /* Images.xcassets in Resources */,
+				CFF312F41A582DA30025986A /* chordpro in Resources */,
 				CFF30B9F1A581DFE0025986A /* InfoPlist.strings in Resources */,
 				CFF30BA81A581DFE0025986A /* Main.storyboard in Resources */,
 			);
@@ -254,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF312F71A58523B0025986A /* Song.m in Sources */,
 				CFF30BA51A581DFE0025986A /* AppDelegate.m in Sources */,
 				CFF30BAB1A581DFE0025986A /* MasterViewController.m in Sources */,
 				CFF30BA11A581DFE0025986A /* main.m in Sources */,
+				CFF30BD01A58260F0025986A /* FileManager.m in Sources */,
 				CFF30BAE1A581DFE0025986A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "useChordPro/useChordPro-Prefix.pch";
 				INFOPLIST_FILE = "useChordPro/useChordPro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,6 +423,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "useChordPro/useChordPro-Prefix.pch";
 				INFOPLIST_FILE = "useChordPro/useChordPro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
